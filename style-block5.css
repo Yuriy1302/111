@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Regular.woff') format('woff'),
+    url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Medium.woff') format('woff'),
+    url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Bold.woff') format('woff'),
+    url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { box-sizing: border-box; }
+
+.leftBar {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+}
+
+.sideNav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 320px;
+    min-height: 100%;
+    margin: 0;
+    padding: 24px 24px 0 24px;
+    
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+                -2px 0px 4px rgba(69, 79, 126, 0.02);
+    background-color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/* BUTTONS */
+.logo {
+    display: block;
+    padding-left: 15px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+.button-close {
+    background: #ff3e79 url('img/close.svg') no-repeat center center;
+}
+.button-search {
+    background: #ff3e79 url('img/search.svg') no-repeat center center;
+    margin-left: auto;
+}
+.button-phone {
+    background: #ff3e79 url('img/phone.svg') no-repeat center center;
+    margin-right: 16px;
+}
+.button-chat {
+    background: #ff3e79 url('img/chat.svg') no-repeat center center;
+    margin-right: 16px;
+}
+.button-profile {
+    background: #ff3e79 url('img/profile.svg') no-repeat center center;
+}
+
+/* СПИСОК ПУНКТОВ МЕНЮ - НАЧАЛО*/
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0 0 auto;
+    
+    width: 100%;
+    padding-top: 25px;
+}
+
+.menu-container > .item { 
+    display: block;
+    position: relative;
+    padding: 5px 0 5px 0;
+
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21; 
+}
+
+.menu-container .item.active,
+.menu-container > .item:hover {
+    color: #7e7e82;
+}
+
+.menu-container .item.active::before,
+.menu-container .item:hover::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 32px;
+
+    position: absolute;
+    left: -24px;
+    top: 0px;
+
+    background-color: #41f6d7;
+    border: 1px solid #41f6d7;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* СПИСОК ПУНКТОВ МЕНЮ - КОНЕЦ */
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+
+    margin: auto 0 0 0;
+    padding: 0 0 16px 0;
+}
+
+.mail-adress {
+    font-family: 'TT Lakes Medium';
+    margin: 0;
+    padding: 0 0 12px 0;
+}
+
+.phone-number {
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin: 0;
+    padding: 0 0 40px 0;
+}
+
+.lang-container {
+    margin: 0;
+    padding: 0 0 32px 0;
+}
+
+.lang-container > .item {
+    text-decoration: none;
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+.lang-container > .item.active {
+    color: #7e7e82;
+}
